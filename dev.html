@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ランダムなmp3再生</title>
+</head>
+<body>
+  <button onclick="playRandomAudio()">ランダムなmp3を再生する</button>
+  
+  <script>
+    function playRandomAudio() {
+      // mp3ファイルのリストを作成します
+      var audioFiles = [
+        'audio1.mp3',
+        'audio2.mp3',
+        'audio3.mp3',
+        // ここに追加のファイル名を追加できます
+      ];
+      
+      // ランダムなインデックスを生成します
+      var randomIndex = Math.floor(Math.random() * audioFiles.length);
+      
+      // <audio>要素を作成します
+      var audioElement = document.createElement('audio');
+      
+      // mp3ファイルを指定します
+      audioElement.src = audioFiles[randomIndex];
+      
+      // 再生を開始します
+      audioElement.play();
+    }
+  </script>
+</body>
+</html>
